@@ -85,6 +85,7 @@
     <Compile Include="ICreateRequests.cs" />
     <Compile Include="IProcessIncomingWebRequests .cs" />
     <Compile Include="MessageGenerator.cs" />
+    <Compile Include="MissingCommandFactory.cs" />
     <Compile Include="RawHandler.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

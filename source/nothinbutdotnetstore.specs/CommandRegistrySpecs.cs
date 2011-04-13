@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using developwithpassion.specifications.moq;
 using Machine.Specifications;
 using Arg = Moq.It;
@@ -42,8 +43,22 @@ namespace nothinbutdotnetstore.specs
                 static ICanProcessOneUniqueRequest the_command_that_can_handle_the_request;
             }
 
-            static ICanProcessOneUniqueRequest result;
-            static IContainRequestDetails request;
+            public class and_it_does_not_have_the_command : when_finding_a_command_that_can_process_a_request
+            {
+                Establish c2 = () =>
+                {
+                    Enumerable.Range(1,100).each(x => all_commands.Add(fake.an<ICanProcessOneUniqueRequest>()));
+                    the_special_case = fake.an<ICanProcessOneUniqueRequest>();
+                    depends.on<MissingCommandFactory>(() => the_special_case);
+                };
+
+                It should_return_the_special_case = () =>
+                    result.ShouldEqual(the_special_case);
+
+                static ICanProcessOneUniqueRequest the_special_case;
+            }
+            protected static ICanProcessOneUniqueRequest result;
+            protected static IContainRequestDetails request;
             protected static IList<ICanProcessOneUniqueRequest> all_commands;
 
         }
