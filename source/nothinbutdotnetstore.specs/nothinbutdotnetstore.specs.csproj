@@ -51,12 +51,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="developwithpassion.specifications, Version=0.4.0.3, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="developwithpassion.specifications, Version=0.4.0.5, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\developwithpassion.specifications.moq.0.4.0.3\lib\developwithpassion.specifications.dll</HintPath>
+      <HintPath>..\..\packages\developwithpassion.specifications.moq.0.4.0.5\lib\developwithpassion.specifications.dll</HintPath>
     </Reference>
     <Reference Include="developwithpassion.specifications.moq, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\developwithpassion.specifications.moq.0.4.0.3\lib\developwithpassion.specifications.moq.dll</HintPath>
+      <HintPath>..\..\packages\developwithpassion.specifications.moq.0.4.0.5\lib\developwithpassion.specifications.moq.dll</HintPath>
     </Reference>
     <Reference Include="Machine.Fakes">
       <HintPath>..\..\packages\Machine.Fakes.0.2.1.2\lib\Machine.Fakes.dll</HintPath>

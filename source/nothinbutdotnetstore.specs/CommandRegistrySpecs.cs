@@ -22,7 +22,7 @@ namespace nothinbutdotnetstore.specs
                 request = fake.an<IContainRequestDetails>();
                 all_commands = new List<ICanProcessOneUniqueRequest>();
                 depends.on<IEnumerable<ICanProcessOneUniqueRequest>>(all_commands);
-                depends.on<MissingCommandFactory>(() => null);
+
             };
 
             Because b = () =>
@@ -34,7 +34,6 @@ namespace nothinbutdotnetstore.specs
                { 
                     the_command_that_can_handle_the_request = fake.an<ICanProcessOneUniqueRequest>();
                     all_commands.Add(the_command_that_can_handle_the_request);
-
                     the_command_that_can_handle_the_request.setup(x => x.can_process(request)).Return(true);
                 };
 
