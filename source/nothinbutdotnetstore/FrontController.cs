@@ -1,10 +1,8 @@
-using System;
-
 namespace nothinbutdotnetstore
 {
     public class FrontController : IProcessIncomingWebRequests
     {
-        private ICanFindCommandsThatCanProcessRequests command_registry;
+        ICanFindCommandsThatCanProcessRequests command_registry;
 
         public FrontController(ICanFindCommandsThatCanProcessRequests command_registry)
         {
