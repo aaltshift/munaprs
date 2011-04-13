@@ -77,6 +77,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrontController.cs" />
+    <Compile Include="ICanFindCommandsThatCanProcessRequests.cs" />
+    <Compile Include="ICanProcessOneUniqueRequest .cs" />
+    <Compile Include="IContainRequestDetails.cs" />
     <Compile Include="ICreateRequests.cs" />
     <Compile Include="IProcessIncomingWebRequests .cs" />
     <Compile Include="MessageGenerator.cs" />

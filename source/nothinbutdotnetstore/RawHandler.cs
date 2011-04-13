@@ -1,29 +1,26 @@
-using System;
 using System.Web;
 
 namespace nothinbutdotnetstore
 {
     public class RawHandler : IHttpHandler
     {
-        private readonly IProcessIncomingWebRequests processIncomingWebRequests;
+        IProcessIncomingWebRequests front_controller;
+        ICreateRequests request_factory;
 
-        private readonly ICreateRequests createRequests;
-
-        public RawHandler(IProcessIncomingWebRequests processIncomingWebRequests, ICreateRequests createRequests)
+        public RawHandler(IProcessIncomingWebRequests front_controller, ICreateRequests request_factory)
         {
-            this.processIncomingWebRequests = processIncomingWebRequests;
-            this.createRequests = createRequests;
+            this.front_controller = front_controller;
+            this.request_factory = request_factory;
         }
 
         public void ProcessRequest(HttpContext context)
         {
-            var request = this.createRequests.create_request_from(context);
-            this.processIncomingWebRequests.process(request);
+            this.front_controller.process(this.request_factory.create_request_from(context));
         }
 
         public bool IsReusable
         {
-            get { throw new NotImplementedException(); }
+            get { return true; }
         }
     }
 }
