@@ -20,7 +20,7 @@ namespace nothinbutdotnetstore.specs
             {
                 request = fake.an<IContainRequestDetails>();
                 all_commands = new List<ICanProcessOneUniqueRequest>();
-                depends.on(all_commands.downcast_to<IEnumerable<ICanProcessOneUniqueRequest>>());
+                depends.on<IEnumerable<ICanProcessOneUniqueRequest>>(all_commands);
             };
 
             Because b = () =>
