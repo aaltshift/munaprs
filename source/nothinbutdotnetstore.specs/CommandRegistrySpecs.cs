@@ -22,6 +22,7 @@ namespace nothinbutdotnetstore.specs
                 request = fake.an<IContainRequestDetails>();
                 all_commands = new List<ICanProcessOneUniqueRequest>();
                 depends.on<IEnumerable<ICanProcessOneUniqueRequest>>(all_commands);
+                depends.on<MissingCommandFactory>(() => null);
             };
 
             Because b = () =>
@@ -30,7 +31,7 @@ namespace nothinbutdotnetstore.specs
             public class and_it_has_the_command : when_finding_a_command_that_can_process_a_request
             {
                 Establish c1 = () =>
-                {
+               { 
                     the_command_that_can_handle_the_request = fake.an<ICanProcessOneUniqueRequest>();
                     all_commands.Add(the_command_that_can_handle_the_request);
 
