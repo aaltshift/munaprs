@@ -23,9 +23,10 @@ namespace nothinbutdotnetstore.specs
                           {
                               read_model_accessor = depends.on<IReadModelAccessor>();
                               response_engine = depends.on<ICanDisplayReportModels>();
+                              request = depends.on<IContainRequestDetails>();
                               report_model = new object();
 
-                              read_model_accessor.setup(x => x.get_read_model()).Return(report_model);
+                              read_model_accessor.setup(x => x.get_read_model(request)).Return(report_model);
                           };
 
             private Because b = () =>

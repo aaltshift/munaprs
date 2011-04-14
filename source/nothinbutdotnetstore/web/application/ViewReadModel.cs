@@ -19,7 +19,7 @@ namespace nothinbutdotnetstore.web.application
 
         public void process(IContainRequestDetails request)
         {
-            response_engine.display(read_model_accessor.get_read_model());
+            response_engine.display(read_model_accessor.get_read_model(request));
         }
     }
 }
