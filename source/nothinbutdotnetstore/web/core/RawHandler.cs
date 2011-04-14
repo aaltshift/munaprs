@@ -12,7 +12,7 @@ namespace nothinbutdotnetstore.web.core
         ICreateRequests request_factory;
 
         public RawHandler():this(new FrontController(),
-            Create.a<StubRequestFactory>())
+            Stub.a<StubRequestFactory>())
         {
         }
 
