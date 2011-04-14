@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using developwithpassion.specifications.moq;
 using Machine.Specifications;
+using nothinbutdotnetstore.web.core;
 using Arg = Moq.It;
 using developwithpassion.specifications.extensions;
 

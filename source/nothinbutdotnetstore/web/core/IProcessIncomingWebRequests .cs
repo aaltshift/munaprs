@@ -1,4 +1,4 @@
-namespace nothinbutdotnetstore
+namespace nothinbutdotnetstore.web.core
 {
     public interface IProcessIncomingWebRequests 
     {

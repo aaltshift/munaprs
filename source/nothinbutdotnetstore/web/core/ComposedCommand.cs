@@ -1,6 +1,4 @@
-using nothinbutdotnetstore.application;
-
-namespace nothinbutdotnetstore
+namespace nothinbutdotnetstore.web.core
 {
     public class ComposedCommand : ICanProcessOneUniqueRequest
     {

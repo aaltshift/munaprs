@@ -77,19 +77,20 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="application\ITriggerApplicationSpecificFunctionality .cs" />
-    <Compile Include="CommandRegistry.cs" />
-    <Compile Include="ComposedCommand.cs" />
-    <Compile Include="FrontController.cs" />
-    <Compile Include="ICanFindCommandsThatCanProcessRequests.cs" />
-    <Compile Include="ICanProcessOneUniqueRequest .cs" />
-    <Compile Include="IContainRequestDetails.cs" />
-    <Compile Include="ICreateRequests.cs" />
-    <Compile Include="IProcessIncomingWebRequests .cs" />
-    <Compile Include="MessageGenerator.cs" />
-    <Compile Include="MissingCommandFactory.cs" />
-    <Compile Include="RawHandler.cs" />
-    <Compile Include="RequestCriteria.cs" />
+    <Compile Include="web\application\ViewMainDepartmentsInTheStore.cs" />
+    <Compile Include="web\core\ITriggerApplicationSpecificFunctionality .cs" />
+    <Compile Include="web\core\CommandRegistry.cs" />
+    <Compile Include="web\core\ComposedCommand.cs" />
+    <Compile Include="web\core\FrontController.cs" />
+    <Compile Include="web\core\ICanFindCommandsThatCanProcessRequests.cs" />
+    <Compile Include="web\core\ICanProcessOneUniqueRequest .cs" />
+    <Compile Include="web\core\IContainRequestDetails.cs" />
+    <Compile Include="web\core\ICreateRequests.cs" />
+    <Compile Include="web\core\IProcessIncomingWebRequests .cs" />
+    <Compile Include="web\core\MessageGenerator.cs" />
+    <Compile Include="web\core\MissingCommandFactory.cs" />
+    <Compile Include="web\core\RawHandler.cs" />
+    <Compile Include="web\core\RequestCriteria.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

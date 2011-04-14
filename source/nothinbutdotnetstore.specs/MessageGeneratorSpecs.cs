@@ -2,6 +2,7 @@ using System.Data;
 using developwithpassion.specifications.extensions;
 using developwithpassion.specifications.moq;
 using Machine.Specifications;
+using nothinbutdotnetstore.web.core;
 
 namespace nothinbutdotnetstore.specs
 {

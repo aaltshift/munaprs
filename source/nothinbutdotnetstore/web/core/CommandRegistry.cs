@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace nothinbutdotnetstore
+namespace nothinbutdotnetstore.web.core
 {
     public class CommandRegistry : ICanFindCommandsThatCanProcessRequests
     {

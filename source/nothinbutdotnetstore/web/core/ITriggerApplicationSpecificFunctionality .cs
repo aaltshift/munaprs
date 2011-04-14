@@ -1,4 +1,4 @@
-namespace nothinbutdotnetstore.application
+namespace nothinbutdotnetstore.web.core
 {
     public interface IEncapsulateApplicationSpecificFunctionality 
     {

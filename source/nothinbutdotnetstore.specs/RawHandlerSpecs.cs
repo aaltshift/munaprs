@@ -3,6 +3,7 @@ using developwithpassion.specifications.extensions;
 using developwithpassion.specifications.moq;
 using Machine.Specifications;
 using nothinbutdotnetstore.specs.utility;
+using nothinbutdotnetstore.web.core;
 using Arg = Moq.It;
 
 namespace nothinbutdotnetstore.specs

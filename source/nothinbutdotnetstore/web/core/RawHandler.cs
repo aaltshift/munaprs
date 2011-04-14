@@ -1,6 +1,6 @@
 using System.Web;
 
-namespace nothinbutdotnetstore
+namespace nothinbutdotnetstore.web.core
 {
     public class RawHandler : IHttpHandler
     {
