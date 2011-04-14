@@ -1,3 +1,5 @@
+using System.Web;
+using developwithpassion.specifications.extensions;
 using developwithpassion.specifications.moq;
 using Machine.Specifications;
 using nothinbutdotnetstore.web.application;
@@ -16,7 +18,26 @@ namespace nothinbutdotnetstore.specs
         [Subject(typeof(ViewMainDepartmentsInTheStore))]
         public class when_observation_name : concern
         {
-            It first_observation = () => 
+            private Establish e = () =>
+                                  {
+                                      sendsResponse = depends.on<ICanSendHttpResponse>();
+                                      var requestProcessor = depends.on<ICanProcessViewMainDeparmentsRequest>();
+                                      requestProcessor.setup(x => x.process(request_details)).Return(view_main_departmens_response);
+                                  };
+
+            Because b = () =>
+                                sut.process(request_details);
+
+            It should_call_the_http_context_with_the_response = () =>
+                                                                        sendsResponse.received(
+                                                                            x =>
+                                                                            x.SendResponse(view_main_departmens_response));
+
+            private static ICanSendHttpResponse sendsResponse;
+            private static HttpResponse view_main_departmens_response;
+            private static IContainRequestDetails request_details;
         }
     }
+
+    
 }
