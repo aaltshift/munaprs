@@ -77,9 +77,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="web\application\ICanProcessViewMainDeparmentsRequest.cs" />
+    <Compile Include="web\application\stubs\StubStoreCatalog.cs" />
     <Compile Include="web\application\ViewMainDepartmentsInTheStore.cs" />
-    <Compile Include="web\core\ICanSendHttpResponse.cs" />
+    <Compile Include="web\core\ICanDisplayReportModels.cs" />
+    <Compile Include="web\application\ICanFindInformationInTheStoreCatalog.cs" />
     <Compile Include="web\core\ITriggerApplicationSpecificFunctionality .cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
     <Compile Include="web\core\ComposedCommand.cs" />
@@ -93,6 +94,11 @@
     <Compile Include="web\core\MissingCommandFactory.cs" />
     <Compile Include="web\core\RawHandler.cs" />
     <Compile Include="web\core\RequestCriteria.cs" />
+    <Compile Include="web\core\stubs\StubCommandFactory.cs" />
+    <Compile Include="web\core\stubs\StubRequestFactory.cs" />
+    <Compile Include="web\core\stubs\StubResponseEngine.cs" />
+    <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
+    <Compile Include="web\core\ViewMainDepartmentModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

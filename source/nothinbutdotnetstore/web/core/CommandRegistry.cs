@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.web.core
 {
@@ -7,6 +8,10 @@ namespace nothinbutdotnetstore.web.core
     {
         IEnumerable<ICanProcessOneUniqueRequest> all_commands;
         MissingCommandFactory missing_command_factory;
+
+        public CommandRegistry():this(new StubSetOfCommands(),StubCommandFactory.missing)
+        {
+        }
 
         public CommandRegistry(IEnumerable<ICanProcessOneUniqueRequest> all_commands,
                                MissingCommandFactory missingCommandFactory)

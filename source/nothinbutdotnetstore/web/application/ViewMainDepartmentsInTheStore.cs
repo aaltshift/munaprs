@@ -1,22 +1,29 @@
-using System;
+using nothinbutdotnetstore.web.application.stubs;
 using nothinbutdotnetstore.web.core;
+using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.web.application
 {
     public class ViewMainDepartmentsInTheStore : IEncapsulateApplicationSpecificFunctionality
     {
-        private readonly ICanSendHttpResponse _sendsResponse;
-        private readonly ICanProcessViewMainDeparmentsRequest _canProcessViewMainDeparmentsRequest;
+        ICanDisplayReportModels response_engine;
+        ICanFindInformationInTheStoreCatalog reporting_gateway;
 
-        public ViewMainDepartmentsInTheStore(ICanSendHttpResponse sendsResponse, ICanProcessViewMainDeparmentsRequest canProcessViewMainDeparmentsRequest)
+        public ViewMainDepartmentsInTheStore():this(new StubResponseEngine(),
+            new StubStoreCatalog())
         {
-            _sendsResponse = sendsResponse;
-            _canProcessViewMainDeparmentsRequest = canProcessViewMainDeparmentsRequest;
+        }
+
+        public ViewMainDepartmentsInTheStore(ICanDisplayReportModels response_engine,
+                                             ICanFindInformationInTheStoreCatalog reporting_gateway)
+        {
+            this.response_engine = response_engine;
+            this.reporting_gateway = reporting_gateway;
         }
 
         public void process(IContainRequestDetails request)
         {
-            _sendsResponse.SendResponse(_canProcessViewMainDeparmentsRequest.process(request));
+            response_engine.display(reporting_gateway.get_the_main_departments_in_the_store());
         }
     }
 }
