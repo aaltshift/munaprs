@@ -4,12 +4,14 @@ using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.web.core
 {
+    using nothinbutdotnetstore.stubs;
+
     public class CommandRegistry : ICanFindCommandsThatCanProcessRequests
     {
         IEnumerable<ICanProcessOneUniqueRequest> all_commands;
         MissingCommandFactory missing_command_factory;
 
-        public CommandRegistry():this(new StubSetOfCommands(),StubCommandFactory.missing)
+        public CommandRegistry():this(Stub.a<StubSetOfCommands>(), StubCommandFactory.missing)
         {
         }
 
