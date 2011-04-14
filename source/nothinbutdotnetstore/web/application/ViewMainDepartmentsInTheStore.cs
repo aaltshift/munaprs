@@ -11,7 +11,7 @@ namespace nothinbutdotnetstore.web.application
         ICanDisplayReportModels response_engine;
         ICanFindInformationInTheStoreCatalog reporting_gateway;
 
-        public ViewMainDepartmentsInTheStore():this(Stub.a<StubResponseEngine>(x => x.not_allowed_after(201104211537)),
+        public ViewMainDepartmentsInTheStore():this(Stub.a<StubResponseEngine>(StubRestrictions.not_allowed_after("201101234")),
             Stub.a<StubStoreCatalog>())
         {
         }
