@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-
 using developwithpassion.specifications.extensions;
 using developwithpassion.specifications.moq;
 using Machine.Specifications;
@@ -13,38 +12,36 @@ namespace nothinbutdotnetstore.specs
     public class ViewReadModelSpecs
     {
         public abstract class concern : Observes<IEncapsulateApplicationSpecificFunctionality,
-                                            ViewReadModel<Object>>
+                                            ViewReadModel<IEnumerable<Person>>>
         {
         }
 
-        [Subject(typeof(ViewReadModel<Object>))]
+        [Subject(typeof(ViewReadModel<IEnumerable<Person>>))]
         public class when_run : concern
         {
             Establish e = () =>
-                          {
-                              read_model_accessor = depends.on<IReadModelAccessor<object>>();
-                              response_engine = depends.on<ICanDisplayReportModels>();
-                              request = depends.on<IContainRequestDetails>();
-                              report_model = new object();
+            {
+                report_model = new List<Person>();
+                depends.on<Query<IEnumerable<Person>>>(x => report_model);
+                response_engine = depends.on<ICanDisplayReportModels>();
+                request = depends.on<IContainRequestDetails>();
+            };
 
-                              read_model_accessor.setup(x => x.get_read_model(request)).Return(report_model);
-                          };
+            Because b = () =>
+                sut.process(request);
 
-            private Because b = () =>
-                                sut.process(request);
+            It should_display_the_read_model = () =>
+                response_engine.received(x => x.display(report_model));
 
-            private It should_display_the_read_model = () =>
-                                                       response_engine.received(x => x.display(report_model));
 
-            private It should_get_the_read_model = () =>
-                                                   { };
-              
-
-            private static IReadModelAccessor<object> read_model_accessor;
-            private static IContainRequestDetails request;
-            private static ICanDisplayReportModels response_engine;
-            private static object report_model;
+            static Query<IEnumerable<Person>> person_query;
+            static IContainRequestDetails request;
+            static ICanDisplayReportModels response_engine;
+            static IEnumerable<Person> report_model;
         }
 
+        public class Person
+        {
+        }
     }
 }

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using nothinbutdotnetstore.stubs;
 using nothinbutdotnetstore.web.application;
+using nothinbutdotnetstore.web.application.stubs;
 
 namespace nothinbutdotnetstore.web.core.stubs
 {
@@ -8,8 +10,11 @@ namespace nothinbutdotnetstore.web.core.stubs
     {
         public IEnumerator<ICanProcessOneUniqueRequest> GetEnumerator()
         {
+            var catalog = Stub.a<StubStoreCatalog>();
+
             yield return new ComposedCommand(x => true,
-                                             new ViewMainDepartmentsInTheStore());
+                                             new ViewReadModel<IEnumerable<DepartmentModel>>(
+                                                 new GetTheMainDepartmentsInTheStore().run_using));
         }
 
         IEnumerator IEnumerable.GetEnumerator()

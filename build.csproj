@@ -56,9 +56,6 @@
     <None Include="push" />
     <None Include="push_latest_work.ps1" />
     <None Include="rakefile.rb" />
-    <None Include="source\config\app.config.erb" />
-    <None Include="source\config\hibernate.cfg.xml.erb" />
-    <None Include="source\config\log4net.config.xml.erb" />
     <None Include="start_new_exercise.ps1" />
   </ItemGroup>
   <ItemGroup>
@@ -81,7 +78,9 @@
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="source\config\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
   </ItemGroup>

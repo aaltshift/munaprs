@@ -9,6 +9,7 @@ task :configure do
     :source_dir => "source",
     :artifacts_dir => "artifacts",
     :config_dir => delayed{configatron.source_dir.join("config")},
+    :app_dir => delayed{configatron.source_dir.join("nothinbutdotnetstore.web.ui")},
 
     :specs =>
     {
@@ -17,7 +18,7 @@ task :configure do
       :dir => delayed{configatron.artifacts_dir.join('specs')},
       :report_dir => delayed{configatron.specs.dir.join('report')},
       :assemblies => dynamic{Dir.glob("#{configatron.artifacts_dir}/*specs.dll")},
-    },
+    }
   }
   configatron.configure_from_hash configs
 end

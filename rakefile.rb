@@ -34,7 +34,7 @@ Rake::Task['expand_all_template_files'].invoke
 @project_files = FileList.new("#{configatron.source_dir}/**/*.csproj")
 
 #configuration files
-config_files = FileList.new(File.join(configatron.source_dir,'config','*.erb')).select{|fn| ! fn.include?('app.config')}
+config_files = FileList.new(File.join(configatron.source_dir,'config','*.erb'))
 
 #target folders that can be run from VS
 solution_file = "solution.sln"
@@ -75,7 +75,7 @@ namespace :build do
 
   task :from_ide do
     config_files.each do |file|
-        [configatron.artifacts_dir].each do|folder|
+        [configatron.artifacts_dir,configatron.app_dir].each do|folder|
           FileUtils.cp(file.name_without_template_extension,
           folder.join(file.base_name_without_extension))
         end

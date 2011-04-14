@@ -17,7 +17,7 @@ _[Rr]e[Ss]harper.*
 *.swo
 source/docs/Help/*.*
 artifacts
-source/config/app.config
+source/config/web.config
 source/config/our_custom_config.txt
 source/config/log4net.config.xml
 source/config/hibernate.cfg.xml

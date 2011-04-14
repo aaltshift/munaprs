@@ -1,25 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using nothinbutdotnetstore.stubs;
 using nothinbutdotnetstore.web.core;
+using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.web.application
 {
     public class ViewReadModel<ReportModel> : IEncapsulateApplicationSpecificFunctionality
     {
-        private IReadModelAccessor<ReportModel> read_model_accessor;
-        private ICanDisplayReportModels response_engine;
+        Query<ReportModel> query;
+        ICanDisplayReportModels response_engine;
 
-        public ViewReadModel(IReadModelAccessor<ReportModel> read_model_accessor, ICanDisplayReportModels response_engine)
+        public ViewReadModel(Query<ReportModel> query):this(query, 
+            Stub.a<StubResponseEngine>())
         {
-            this.read_model_accessor = read_model_accessor;
+        }
+
+        public ViewReadModel(Query<ReportModel> query,
+                             ICanDisplayReportModels response_engine)
+        {
+            this.query = query;
             this.response_engine = response_engine;
         }
 
         public void process(IContainRequestDetails request)
         {
-            response_engine.display(read_model_accessor.get_read_model(request));
+            response_engine.display(query(request));
         }
     }
 }

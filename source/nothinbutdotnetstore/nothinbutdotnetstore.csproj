@@ -80,8 +80,9 @@
     <Compile Include="stubs\Stub.cs" />
     <Compile Include="stubs\StubOptions.cs" />
     <Compile Include="stubs\StubRestrictions.cs" />
-    <Compile Include="web\application\IReadModelAccessor.cs" />
+    <Compile Include="web\application\Query.cs" />
     <Compile Include="web\application\ProductModel.cs" />
+    <Compile Include="web\application\StoreCatalogController.cs" />
     <Compile Include="web\application\stubs\StubStoreCatalog.cs" />
     <Compile Include="web\application\ViewMainDepartmentsInTheStore.cs" />
     <Compile Include="web\application\ViewProductsInADepartment.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="web\core\MissingCommandFactory.cs" />
     <Compile Include="web\core\RawHandler.cs" />
     <Compile Include="web\core\RequestCriteria.cs" />
+    <Compile Include="web\core\stubs\GetTheMainDepartmentsInTheStore.cs" />
     <Compile Include="web\core\stubs\StubCommandFactory.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\core\stubs\StubResponseEngine.cs" />
