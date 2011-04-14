@@ -17,7 +17,7 @@ namespace nothinbutdotnetstore.web.application.stubs
             throw new NotImplementedException();
         }
 
-        public IEnumerable<ProductModel> get_the_products_at_department(DepartmentModel department)
+        public IEnumerable<ProductModel> get_the_products_in_department(DepartmentModel department)
         {
             throw new NotImplementedException();
         }

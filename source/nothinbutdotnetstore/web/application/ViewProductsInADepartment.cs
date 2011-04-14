@@ -1,27 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using nothinbutdotnetstore.web.core;
+﻿using nothinbutdotnetstore.web.core;
 
 namespace nothinbutdotnetstore.web.application
 {
     public class ViewProductsInADepartment : IEncapsulateApplicationSpecificFunctionality
     {
-        private IContainRequestDetails request_details;
-        private ICanFindInformationInTheStoreCatalog store_catalog;
-        private ICanDisplayReportModels response_engine;
+        IContainRequestDetails request_details;
+        ICanFindInformationInTheStoreCatalog store_catalog;
+        ICanDisplayReportModels response_engine;
 
-        public ViewProductsInADepartment(IContainRequestDetails requestDetails, ICanFindInformationInTheStoreCatalog storeCatalog, ICanDisplayReportModels responseEngine)
+        public ViewProductsInADepartment(IContainRequestDetails request_details,
+                                         ICanFindInformationInTheStoreCatalog store_catalog,
+                                         ICanDisplayReportModels response_engine)
         {
-            request_details = requestDetails;
-            response_engine = responseEngine;
-            store_catalog = storeCatalog;
+            this.request_details = request_details;
+            this.response_engine = response_engine;
+            this.store_catalog = store_catalog;
         }
 
         public void process(IContainRequestDetails request)
         {
-            response_engine.display(store_catalog.get_the_products_at_department(request_details.map<DepartmentModel>()));
+            this.response_engine.display(store_catalog.get_the_products_in_department(request_details.map<DepartmentModel>()));
         }
     }
 }
