@@ -110,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandRegistrySpecs.cs" />
+    <Compile Include="ComposedCommandSpecs.cs" />
     <Compile Include="FrontControllerSpecs.cs" />
     <Compile Include="RawHandlerSpecs.cs" />
     <Compile Include="MessageGeneratorSpecs.cs" />

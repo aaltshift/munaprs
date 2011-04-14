@@ -31,7 +31,7 @@ namespace nothinbutdotnetstore.specs
 
 
             It should_delegate_the_processing_to_the_command_that_can_handle_the_request = () =>
-                command_that_can_handle_the_request.received(x => x.run_using(request_details));
+                command_that_can_handle_the_request.received(x => x.process(request_details));
 
             static ICanProcessOneUniqueRequest command_that_can_handle_the_request;
             static IContainRequestDetails request_details;

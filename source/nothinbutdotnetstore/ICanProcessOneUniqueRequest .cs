@@ -1,8 +1,9 @@
+using nothinbutdotnetstore.application;
+
 namespace nothinbutdotnetstore
 {
-    public interface ICanProcessOneUniqueRequest 
+    public interface ICanProcessOneUniqueRequest  : IEncapsulateApplicationSpecificFunctionality
     {
-        void run_using(IContainRequestDetails request);
         bool can_process(IContainRequestDetails request);
     }
 }

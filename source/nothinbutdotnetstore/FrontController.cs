@@ -11,7 +11,7 @@ namespace nothinbutdotnetstore
 
         public void process(IContainRequestDetails the_request)
         {
-            command_registry.get_the_command_that_can_handle(the_request).run_using(the_request);
+            command_registry.get_the_command_that_can_handle(the_request).process(the_request);
         }
     }
 }
