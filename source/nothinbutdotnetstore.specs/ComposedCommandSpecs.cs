@@ -1,18 +1,16 @@
- using System.Web.Configuration;
- using Machine.Specifications;
- using developwithpassion.specifications.moq;
- using developwithpassion.specifications.extensions;
- using nothinbutdotnetstore.web.core;
- using Arg = Moq.It;
+using developwithpassion.specifications.extensions;
+using developwithpassion.specifications.moq;
+using Machine.Specifications;
+using nothinbutdotnetstore.web.core;
+using Arg = Moq.It;
 
 namespace nothinbutdotnetstore.specs
-{   
+{
     public class ComposedCommandSpecs
     {
-        public abstract class concern : Observes<ICanProcessOneUniqueRequest    ,
+        public abstract class concern : Observes<ICanProcessOneUniqueRequest,
                                             ComposedCommand>
         {
-        
         }
 
         [Subject(typeof(ComposedCommand))]
@@ -27,14 +25,13 @@ namespace nothinbutdotnetstore.specs
             Because b = () =>
                 result = sut.can_process(request);
 
-
             It should_make_the_determination_by_using_its_request_specification = () =>
                 result.ShouldBeTrue();
-
 
             static bool result;
             static IContainRequestDetails request;
         }
+
         public class when_processing_a_request : concern
         {
             Establish c = () =>
@@ -46,11 +43,8 @@ namespace nothinbutdotnetstore.specs
             Because b = () =>
                 sut.process(request);
 
-
-
             It should_delegate_processing_to_the_application_behaviour = () =>
                 application_behaviour.received(x => x.process(request));
-
 
             static bool result;
             static IContainRequestDetails request;
