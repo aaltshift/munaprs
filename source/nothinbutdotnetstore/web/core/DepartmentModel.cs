@@ -1,6 +1,6 @@
 namespace nothinbutdotnetstore.web.core
 {
-    public class ViewMainDepartmentModel
+    public class DepartmentModel
     {
         public string name { get; set; }
     }
