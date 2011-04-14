@@ -80,10 +80,12 @@
     <Compile Include="stubs\Stub.cs" />
     <Compile Include="stubs\StubOptions.cs" />
     <Compile Include="stubs\StubRestrictions.cs" />
+    <Compile Include="web\application\IReadModelAccessor.cs" />
     <Compile Include="web\application\ProductModel.cs" />
     <Compile Include="web\application\stubs\StubStoreCatalog.cs" />
     <Compile Include="web\application\ViewMainDepartmentsInTheStore.cs" />
     <Compile Include="web\application\ViewProductsInADepartment.cs" />
+    <Compile Include="web\application\ViewReadModel.cs" />
     <Compile Include="web\application\ViewTheDepartmentsInADepartment.cs" />
     <Compile Include="web\core\ICanDisplayReportModels.cs" />
     <Compile Include="web\application\ICanFindInformationInTheStoreCatalog.cs" />
