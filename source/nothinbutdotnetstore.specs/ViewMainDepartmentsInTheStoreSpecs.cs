@@ -28,7 +28,7 @@ namespace nothinbutdotnetstore.specs
             Because b = () =>
                                 sut.process(request_details);
 
-            It should_call_the_http_context_with_the_response = () =>
+            It should_send_http_response = () =>
                                                                         sendsResponse.received(
                                                                             x =>
                                                                             x.SendResponse(view_main_departmens_response));
