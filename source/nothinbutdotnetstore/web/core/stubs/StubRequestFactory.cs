@@ -1,3 +1,4 @@
+using System;
 using System.Web;
 
 namespace nothinbutdotnetstore.web.core.stubs
@@ -11,6 +12,12 @@ namespace nothinbutdotnetstore.web.core.stubs
 
         class StubRequestDetails : IContainRequestDetails
         {
+
+            public InputModel map<InputModel>()
+            {
+                object item = new DepartmentModel();
+                return (InputModel) item;
+            }
         }
     }
 }

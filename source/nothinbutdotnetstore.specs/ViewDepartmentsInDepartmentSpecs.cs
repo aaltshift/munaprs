@@ -21,26 +21,35 @@ namespace nothinbutdotnetstore.specs
         {
             Establish e = () =>
             {
-                department = fake.an<DepartmentModel>();
-                the_sub_departments = new List<DepartmentModel> { new DepartmentModel() };
-                request_details = fake.an<IContainRequestDetails>();
                 response_engine = depends.on<ICanDisplayReportModels>();
+                parent_department = depends.on<DepartmentModel>();
+                request_details = fake.an<IContainRequestDetails>();
+                sub_departments = new List<DepartmentModel> {new DepartmentModel()};
                 reporting_gateway = depends.on<ICanFindInformationInTheStoreCatalog>();
-                reporting_gateway.setup(x => x.get_the_sub_departments_in_a_department(Arg.IsAny<DepartmentModel>())).Return(the_sub_departments);
-                depends.on(department);
+                reporting_gateway.setup(x => x.get_the_sub_departments_in(parent_department)).Return(sub_departments);
+
+                request_details.setup(x => x.map<DepartmentModel>()).Return(parent_department);
+
             };
 
-            It should_tell_the_response_engine_to_display_the_model = () =>
-                response_engine.received(x => x.display(the_sub_departments));
+            Because b = () =>
+                sut.process(request_details);
+
 
             It should_retrieve_the_departments_in_a_department = () =>
-                reporting_gateway.received(x => x.get_the_sub_departments_in_a_department(department));
+            {
+            };
 
-            static ICanDisplayReportModels response_engine;
+            It should_display_the_sub_departments = () =>
+                response_engine.received(x => x.display(sub_departments));
+  
+
+
             static IContainRequestDetails request_details;
             static ICanFindInformationInTheStoreCatalog reporting_gateway;
-            static IEnumerable<DepartmentModel> the_sub_departments;
-            static DepartmentModel department;
+            static DepartmentModel parent_department;
+            static ICanDisplayReportModels response_engine;
+            static IEnumerable<DepartmentModel> sub_departments;
         }
     }
 }

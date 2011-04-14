@@ -12,9 +12,9 @@ namespace nothinbutdotnetstore.web.application.stubs
             return Enumerable.Range(1, 100).Select(x => new DepartmentModel{name = x.ToString("Main Department 0")});
         }
 
-        public IEnumerable<DepartmentModel> get_the_sub_departments_in_a_department(DepartmentModel departmentModel)
+        public IEnumerable<DepartmentModel> get_the_sub_departments_in(DepartmentModel departmentModel)
         {
-            return Enumerable.Range(1, 10).Select(x => new DepartmentModel { name = x.ToString("Sub Department 0") });
+            throw new NotImplementedException();
         }
     }
 }
