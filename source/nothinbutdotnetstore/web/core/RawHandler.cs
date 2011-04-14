@@ -3,6 +3,8 @@ using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.web.core
 {
+    using nothinbutdotnetstore.stubs;
+
     public class RawHandler : IHttpHandler
     {
         IProcessIncomingWebRequests front_controller;
@@ -10,7 +12,7 @@ namespace nothinbutdotnetstore.web.core
         ICreateRequests request_factory;
 
         public RawHandler():this(new FrontController(),
-            new StubRequestFactory())
+            Create.a<StubRequestFactory>())
         {
         }
 

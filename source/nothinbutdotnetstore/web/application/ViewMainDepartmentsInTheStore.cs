@@ -4,13 +4,15 @@ using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.web.application
 {
+    using nothinbutdotnetstore.stubs;
+
     public class ViewMainDepartmentsInTheStore : IEncapsulateApplicationSpecificFunctionality
     {
         ICanDisplayReportModels response_engine;
         ICanFindInformationInTheStoreCatalog reporting_gateway;
 
-        public ViewMainDepartmentsInTheStore():this(new StubResponseEngine(),
-            new StubStoreCatalog())
+        public ViewMainDepartmentsInTheStore():this(Create.a<StubResponseEngine>(),
+            Create.a<StubStoreCatalog>())
         {
         }
 
