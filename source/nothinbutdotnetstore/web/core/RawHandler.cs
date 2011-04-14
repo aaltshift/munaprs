@@ -1,11 +1,18 @@
 using System.Web;
+using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.web.core
 {
     public class RawHandler : IHttpHandler
     {
         IProcessIncomingWebRequests front_controller;
+
         ICreateRequests request_factory;
+
+        public RawHandler():this(new FrontController(),
+            new StubRequestFactory())
+        {
+        }
 
         public RawHandler(IProcessIncomingWebRequests front_controller, ICreateRequests request_factory)
         {
