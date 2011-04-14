@@ -6,12 +6,12 @@ using nothinbutdotnetstore.web.core;
 
 namespace nothinbutdotnetstore.web.application
 {
-    public class ViewReadModel : IEncapsulateApplicationSpecificFunctionality
+    public class ViewReadModel<ReportModel> : IEncapsulateApplicationSpecificFunctionality
     {
-        private IReadModelAccessor read_model_accessor;
+        private IReadModelAccessor<ReportModel> read_model_accessor;
         private ICanDisplayReportModels response_engine;
 
-        public ViewReadModel(IReadModelAccessor read_model_accessor, ICanDisplayReportModels response_engine)
+        public ViewReadModel(IReadModelAccessor<ReportModel> read_model_accessor, ICanDisplayReportModels response_engine)
         {
             this.read_model_accessor = read_model_accessor;
             this.response_engine = response_engine;

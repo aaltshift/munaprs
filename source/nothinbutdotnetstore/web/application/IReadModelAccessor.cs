@@ -6,8 +6,8 @@ using nothinbutdotnetstore.web.core;
 
 namespace nothinbutdotnetstore.web.application
 {
-    public interface IReadModelAccessor
+    public interface IReadModelAccessor<ReportModel>
     {
-        object get_read_model(IContainRequestDetails request_details );
+        ReportModel get_read_model(IContainRequestDetails request_details );
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 using developwithpassion.specifications.extensions;
@@ -12,16 +13,16 @@ namespace nothinbutdotnetstore.specs
     public class ViewReadModelSpecs
     {
         public abstract class concern : Observes<IEncapsulateApplicationSpecificFunctionality,
-                                            ViewReadModel>
+                                            ViewReadModel<Object>>
         {
         }
 
-        [Subject(typeof(ViewReadModel))]
+        [Subject(typeof(ViewReadModel<Object>))]
         public class when_run : concern
         {
             Establish e = () =>
                           {
-                              read_model_accessor = depends.on<IReadModelAccessor>();
+                              read_model_accessor = depends.on<IReadModelAccessor<object>>();
                               response_engine = depends.on<ICanDisplayReportModels>();
                               request = depends.on<IContainRequestDetails>();
                               report_model = new object();
@@ -39,7 +40,7 @@ namespace nothinbutdotnetstore.specs
                                                    { };
               
 
-            private static IReadModelAccessor read_model_accessor;
+            private static IReadModelAccessor<object> read_model_accessor;
             private static IContainRequestDetails request;
             private static ICanDisplayReportModels response_engine;
             private static object report_model;
