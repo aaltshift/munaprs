@@ -20,7 +20,7 @@ namespace nothinbutdotnetstore.specs
         {
             Establish e = () =>
             {
-                the_main_departments = new List<ViewMainDepartmentModel> {new ViewMainDepartmentModel()};
+                the_main_departments = new List<DepartmentModel> {new DepartmentModel()};
                 request_details = fake.an<IContainRequestDetails>();
                 response_engine = depends.on<ICanDisplayReportModels>();
                 reporting_gateway = depends.on<ICanFindInformationInTheStoreCatalog>();
@@ -36,7 +36,7 @@ namespace nothinbutdotnetstore.specs
             static ICanDisplayReportModels response_engine;
             static IContainRequestDetails request_details;
             static ICanFindInformationInTheStoreCatalog reporting_gateway;
-            static IEnumerable<ViewMainDepartmentModel> the_main_departments;
+            static IEnumerable<DepartmentModel> the_main_departments;
         }
     }
 }
