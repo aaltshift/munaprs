@@ -16,7 +16,6 @@ namespace nothinbutdotnetstore.specs
         [Subject(typeof(ViewMainDepartmentsInTheStore))]
         public class when_observation_name : concern
         {
-            It first_observation = () => 
         }
     }
 }
