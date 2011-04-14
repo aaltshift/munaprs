@@ -46,7 +46,6 @@ namespace nothinbutdotnetstore.specs
             It should_delegate_processing_to_the_application_behaviour = () =>
                 application_behaviour.received(x => x.process(request));
 
-            static bool result;
             static IContainRequestDetails request;
             static IEncapsulateApplicationSpecificFunctionality application_behaviour;
         }
