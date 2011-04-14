@@ -1,12 +1,10 @@
-using nothinbutdotnetstore.web.core.stubs;
-
 namespace nothinbutdotnetstore.web.core
 {
     public class FrontController : IProcessIncomingWebRequests
     {
         ICanFindCommandsThatCanProcessRequests command_registry;
 
-        public FrontController():this(new CommandRegistry())
+        public FrontController() : this(new CommandRegistry())
         {
         }
 
