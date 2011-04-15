@@ -109,6 +109,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddItemToShoppingCartSpecs.cs" />
     <Compile Include="CommandRegistrySpecs.cs" />
     <Compile Include="ComposedCommandSpecs.cs" />
     <Compile Include="ViewReadModelSpecs.cs" />
