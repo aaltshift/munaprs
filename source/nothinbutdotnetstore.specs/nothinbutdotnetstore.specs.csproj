@@ -111,7 +111,9 @@
   <ItemGroup>
     <Compile Include="CommandRegistrySpecs.cs" />
     <Compile Include="ComposedCommandSpecs.cs" />
+    <Compile Include="CreateViewsBoundToReportModelsSpecs.cs" />
     <Compile Include="ICanDisplayReportModelsSpecs.cs" />
+    <Compile Include="utility\SomeFakeHandler.cs" />
     <Compile Include="ViewReadModelSpecs.cs" />
     <Compile Include="FrontControllerSpecs.cs" />
     <Compile Include="RawHandlerSpecs.cs" />

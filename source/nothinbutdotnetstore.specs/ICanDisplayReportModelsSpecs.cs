@@ -1,4 +1,3 @@
-using System;
 using System.Web;
 using developwithpassion.specifications.extensions;
 using developwithpassion.specifications.moq;
@@ -47,20 +46,7 @@ namespace nothinbutdotnetstore.specs
             {
             }
 
-            class SomeFakeHandler : IHttpHandler
-            {
-                public HttpContext context;
 
-                public void ProcessRequest(HttpContext context)
-                {
-                    this.context = context;
-                }
-
-                public bool IsReusable
-                {
-                    get { throw new NotImplementedException(); }
-                }
-            }
         }
     }
 }

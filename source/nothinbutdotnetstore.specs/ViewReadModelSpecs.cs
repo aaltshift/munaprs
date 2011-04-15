@@ -33,8 +33,6 @@ namespace nothinbutdotnetstore.specs
             It should_display_the_read_model = () =>
                 response_engine.received(x => x.display(report_model));
 
-
-            static Query<IEnumerable<Person>> person_query;
             static IContainRequestDetails request;
             static ICanDisplayReportModels response_engine;
             static IEnumerable<Person> report_model;
