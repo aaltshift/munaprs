@@ -35,7 +35,7 @@ namespace nothinbutdotnetstore.specs
             It should_use_the_view_factory_to_create_a_physical_view_for_the_model =
                 () => view_factory.received(x => x.create_view_to_display(report_model));
 
-            It should_request_view_location =
+            It should_tell_view_to_process_request =
                 () => view.received(x => view.ProcessRequest(context));
 
             static IHttpHandler view;
