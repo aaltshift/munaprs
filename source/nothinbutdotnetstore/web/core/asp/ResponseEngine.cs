@@ -1,11 +1,16 @@
 using System.Web;
 
-namespace nothinbutdotnetstore.web.core
+namespace nothinbutdotnetstore.web.core.asp
 {
     public class ResponseEngine : ICanDisplayReportModels
     {
         ICreateViewsBoundToReportModels view_factory;
-        CurrentContextResolver current_context = () => HttpContext.Current;
+        CurrentContextResolver current_context;
+
+        public ResponseEngine():this(new ViewFactory(),
+            () => HttpContext.Current)
+        {
+        }
 
         public ResponseEngine(ICreateViewsBoundToReportModels view_factory, CurrentContextResolver current_context)
         {

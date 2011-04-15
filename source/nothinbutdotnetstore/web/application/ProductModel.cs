@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace nothinbutdotnetstore.web.application
+﻿namespace nothinbutdotnetstore.web.application
 {
     public class ProductModel
     {
+        public string name { get; set; }
     }
 }

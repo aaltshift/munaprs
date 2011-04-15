@@ -5,6 +5,7 @@ using developwithpassion.specifications.moq;
 using Machine.Specifications;
 using nothinbutdotnetstore.specs.utility;
 using nothinbutdotnetstore.web.core;
+using nothinbutdotnetstore.web.core.asp;
 
 namespace nothinbutdotnetstore.specs
 {

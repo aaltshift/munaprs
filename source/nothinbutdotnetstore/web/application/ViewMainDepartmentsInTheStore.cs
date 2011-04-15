@@ -1,6 +1,6 @@
 using nothinbutdotnetstore.web.application.stubs;
 using nothinbutdotnetstore.web.core;
-using nothinbutdotnetstore.web.core.stubs;
+using nothinbutdotnetstore.web.core.asp;
 
 namespace nothinbutdotnetstore.web.application
 {
@@ -11,7 +11,7 @@ namespace nothinbutdotnetstore.web.application
         ICanDisplayReportModels response_engine;
         ICanFindInformationInTheStoreCatalog reporting_gateway;
 
-        public ViewMainDepartmentsInTheStore():this(Stub.a<StubResponseEngine>(StubRestrictions.not_allowed_after("201101234")),
+        public ViewMainDepartmentsInTheStore():this(new ResponseEngine(),
             Stub.a<StubStoreCatalog>())
         {
         }
