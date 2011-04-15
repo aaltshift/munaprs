@@ -20,16 +20,16 @@ namespace nothinbutdotnetstore.specs
             Establish c = () =>
             {
                 report_model = new TestModel();
-                view_finder = depends.on<ICanFindAPhysicalView>();
+                view_factory = depends.on<ICreateViewsBoundToReportModels>();
             };
 
             Because of = () => sut.display(report_model);
 
-            It should_use_the_viewfinder_to_locate_a_physical_view_for_the_model =
-                () => view_finder.received(x => x.find<TestModel>());
+            It should_use_the_view_factory_to_create_a_physical_view_for_the_model =
+                () => view_factory.received(x => x.create_view_to_display(report_model));
 
             static TestModel report_model;
-            static ICanFindAPhysicalView view_finder;
+            static ICreateViewsBoundToReportModels view_factory;
 
 
             class TestModel

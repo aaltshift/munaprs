@@ -90,7 +90,7 @@
     <Compile Include="web\application\ViewTheDepartmentsInADepartment.cs" />
     <Compile Include="web\core\ICanDisplayReportModels.cs" />
     <Compile Include="web\application\ICanFindInformationInTheStoreCatalog.cs" />
-    <Compile Include="web\core\ICanFindAPhysicalView.cs" />
+    <Compile Include="web\core\ICreateViewsBoundToReportModels.cs" />
     <Compile Include="web\core\ITriggerApplicationSpecificFunctionality .cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
     <Compile Include="web\core\ComposedCommand.cs" />
