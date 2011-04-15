@@ -91,6 +91,7 @@
     <Compile Include="web\core\CurrentContextResolver.cs" />
     <Compile Include="web\core\ICanDisplayReportModels.cs" />
     <Compile Include="web\application\ICanFindInformationInTheStoreCatalog.cs" />
+    <Compile Include="web\core\ICanResolveVirtualPathFromReportModel.cs" />
     <Compile Include="web\core\ICreateViewsBoundToReportModels.cs" />
     <Compile Include="web\core\ITriggerApplicationSpecificFunctionality .cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
@@ -112,6 +113,7 @@
     <Compile Include="web\core\stubs\StubResponseEngine.cs" />
     <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
     <Compile Include="web\application\models\DepartmentModel.cs" />
+    <Compile Include="web\core\ViewFactory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
