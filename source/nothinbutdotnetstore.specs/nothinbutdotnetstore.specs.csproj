@@ -111,11 +111,7 @@
   <ItemGroup>
     <Compile Include="CommandRegistrySpecs.cs" />
     <Compile Include="ComposedCommandSpecs.cs" />
-<<<<<<< HEAD
-    <Compile Include="CreateViewsBoundToReportModelsSpecs.cs" />
-=======
     <Compile Include="ICreateViewBoundToReportModelsSpecs.cs" />
->>>>>>> 470d75ef5ae910d62d5d2c4337f2bcfa3e182bb3
     <Compile Include="ICanDisplayReportModelsSpecs.cs" />
     <Compile Include="utility\SomeFakeHandler.cs" />
     <Compile Include="ViewReadModelSpecs.cs" />
