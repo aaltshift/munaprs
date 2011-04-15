@@ -77,6 +77,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="core\ICanMonitorTime.cs" />
+    <Compile Include="core\ILogMessages.cs" />
     <Compile Include="stubs\Stub.cs" />
     <Compile Include="stubs\StubOptions.cs" />
     <Compile Include="stubs\StubRestrictions.cs" />
@@ -107,12 +109,14 @@
     <Compile Include="web\core\IContainRequestDetails.cs" />
     <Compile Include="web\core\ICreateRequests.cs" />
     <Compile Include="web\core\IProcessIncomingWebRequests .cs" />
+    <Compile Include="web\core\LogTimingCommand.cs" />
     <Compile Include="web\core\MessageGenerator.cs" />
     <Compile Include="web\core\MissingCommandFactory.cs" />
     <Compile Include="web\core\asp\PageFactory.cs" />
     <Compile Include="web\core\RawHandler.cs" />
     <Compile Include="web\core\RequestCriteria.cs" />
     <Compile Include="web\core\asp\ResponseEngine.cs" />
+    <Compile Include="web\core\SecurityCommand.cs" />
     <Compile Include="web\core\stubs\GetTheMainDepartmentsInTheStore.cs" />
     <Compile Include="web\core\stubs\StubCommandFactory.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
