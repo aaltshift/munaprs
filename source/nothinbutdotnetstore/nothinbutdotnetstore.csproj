@@ -80,6 +80,7 @@
     <Compile Include="stubs\Stub.cs" />
     <Compile Include="stubs\StubOptions.cs" />
     <Compile Include="stubs\StubRestrictions.cs" />
+    <Compile Include="web\application\LazyRequest.cs" />
     <Compile Include="web\application\Query.cs" />
     <Compile Include="web\application\ProductModel.cs" />
     <Compile Include="web\application\StoreCatalogController.cs" />
@@ -88,10 +89,15 @@
     <Compile Include="web\application\ViewProductsInADepartment.cs" />
     <Compile Include="web\application\ViewReadModel.cs" />
     <Compile Include="web\application\ViewTheDepartmentsInADepartment.cs" />
-    <Compile Include="web\core\CurrentContextResolver.cs" />
+    <Compile Include="web\core\asp\CurrentContextResolver.cs" />
+    <Compile Include="web\core\asp\SimplePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="web\core\ICanDisplayReportModels.cs" />
     <Compile Include="web\application\ICanFindInformationInTheStoreCatalog.cs" />
+    <Compile Include="web\core\ICanResolveVirtualPathFromReportModel.cs" />
     <Compile Include="web\core\ICreateViewsBoundToReportModels.cs" />
+    <Compile Include="web\core\IRenderA.cs" />
     <Compile Include="web\core\ITriggerApplicationSpecificFunctionality .cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
     <Compile Include="web\core\ComposedCommand.cs" />
@@ -103,15 +109,17 @@
     <Compile Include="web\core\IProcessIncomingWebRequests .cs" />
     <Compile Include="web\core\MessageGenerator.cs" />
     <Compile Include="web\core\MissingCommandFactory.cs" />
+    <Compile Include="web\core\asp\PageFactory.cs" />
     <Compile Include="web\core\RawHandler.cs" />
     <Compile Include="web\core\RequestCriteria.cs" />
-    <Compile Include="web\core\ResponseEngine.cs" />
+    <Compile Include="web\core\asp\ResponseEngine.cs" />
     <Compile Include="web\core\stubs\GetTheMainDepartmentsInTheStore.cs" />
     <Compile Include="web\core\stubs\StubCommandFactory.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
-    <Compile Include="web\core\stubs\StubResponseEngine.cs" />
     <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
     <Compile Include="web\application\models\DepartmentModel.cs" />
+    <Compile Include="web\core\stubs\StubViewPathRegistry.cs" />
+    <Compile Include="web\core\asp\ViewFactory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

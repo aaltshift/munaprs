@@ -1,5 +1,8 @@
+using nothinbutdotnetstore.stubs;
 using nothinbutdotnetstore.web.application.models;
+using nothinbutdotnetstore.web.application.stubs;
 using nothinbutdotnetstore.web.core;
+using nothinbutdotnetstore.web.core.asp;
 
 namespace nothinbutdotnetstore.web.application
 {
@@ -7,6 +10,11 @@ namespace nothinbutdotnetstore.web.application
     {
         ICanFindInformationInTheStoreCatalog store_catalog;
         ICanDisplayReportModels response_engine;
+
+        public ViewTheDepartmentsInADepartment():this(Stub.a<StubStoreCatalog>(),
+            new ResponseEngine())
+        {
+        }
 
         public ViewTheDepartmentsInADepartment(ICanFindInformationInTheStoreCatalog store_catalog, ICanDisplayReportModels response_engine)
         {

@@ -17,9 +17,10 @@ CodeFile="ProductBrowser.aspx.cs" MasterPageFile="Store.master" %>
                         <th></th>
                     </tr>
                 </thead>
+                <% foreach(var product in this.report_model) {%>
         <tr class="nonShadedRow">                    
             <td class="ListItem">                    
-                <a href='#'>Product Name</a>
+                <a href='#'><%= product.name %></a>
             </td>
             <td>Product Description</td>
             <td><input type="text" class="normalTextBox" value="1" /></td>
@@ -28,6 +29,7 @@ CodeFile="ProductBrowser.aspx.cs" MasterPageFile="Store.master" %>
             <td><input type="button" value="Add To cart"/></td>
 
         </tr>
+        <%} %>
     	</table>	
 								<table>
 									<tr>

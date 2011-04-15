@@ -1,6 +1,5 @@
-﻿using nothinbutdotnetstore.stubs;
-using nothinbutdotnetstore.web.core;
-using nothinbutdotnetstore.web.core.stubs;
+﻿using nothinbutdotnetstore.web.core;
+using nothinbutdotnetstore.web.core.asp;
 
 namespace nothinbutdotnetstore.web.application
 {
@@ -9,8 +8,8 @@ namespace nothinbutdotnetstore.web.application
         Query<ReportModel> query;
         ICanDisplayReportModels response_engine;
 
-        public ViewReadModel(Query<ReportModel> query):this(query, 
-            Stub.a<StubResponseEngine>())
+        public ViewReadModel(Query<ReportModel> query) : this(query,
+                                                              new ResponseEngine())
         {
         }
 
