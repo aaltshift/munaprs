@@ -131,6 +131,6 @@
   -->
   <PropertyGroup>
     <PostBuildEvent>cd $(SolutionDir)
-build build:from_ide</PostBuildEvent>
+build copy_config_files</PostBuildEvent>
   </PropertyGroup>
 </Project>
