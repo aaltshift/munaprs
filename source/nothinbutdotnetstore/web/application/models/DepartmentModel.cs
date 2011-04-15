@@ -1,4 +1,4 @@
-namespace nothinbutdotnetstore.web.core
+namespace nothinbutdotnetstore.web.application.models
 {
     public class DepartmentModel
     {

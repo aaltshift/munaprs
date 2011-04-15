@@ -1,4 +1,5 @@
-﻿using nothinbutdotnetstore.web.core;
+﻿using nothinbutdotnetstore.web.application.models;
+using nothinbutdotnetstore.web.core;
 
 namespace nothinbutdotnetstore.web.application
 {

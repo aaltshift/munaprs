@@ -88,6 +88,7 @@
     <Compile Include="web\application\ViewProductsInADepartment.cs" />
     <Compile Include="web\application\ViewReadModel.cs" />
     <Compile Include="web\application\ViewTheDepartmentsInADepartment.cs" />
+    <Compile Include="web\core\CurrentContextResolver.cs" />
     <Compile Include="web\core\ICanDisplayReportModels.cs" />
     <Compile Include="web\application\ICanFindInformationInTheStoreCatalog.cs" />
     <Compile Include="web\core\ICreateViewsBoundToReportModels.cs" />
@@ -110,7 +111,7 @@
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\core\stubs\StubResponseEngine.cs" />
     <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
-    <Compile Include="web\core\DepartmentModel.cs" />
+    <Compile Include="web\application\models\DepartmentModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using nothinbutdotnetstore.stubs;
 using nothinbutdotnetstore.web.application;
+using nothinbutdotnetstore.web.application.models;
 using nothinbutdotnetstore.web.application.stubs;
 
 namespace nothinbutdotnetstore.web.core.stubs

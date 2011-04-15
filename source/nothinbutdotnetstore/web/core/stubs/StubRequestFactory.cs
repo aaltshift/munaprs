@@ -1,5 +1,6 @@
 using System;
 using System.Web;
+using nothinbutdotnetstore.web.application.models;
 
 namespace nothinbutdotnetstore.web.core.stubs
 {
