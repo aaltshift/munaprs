@@ -113,6 +113,7 @@
     <Compile Include="ComposedCommandSpecs.cs" />
     <Compile Include="ICreateViewBoundToReportModelsSpecs.cs" />
     <Compile Include="ICanDisplayReportModelsSpecs.cs" />
+    <Compile Include="LogTimingCommandSpecs.cs" />
     <Compile Include="ViewReadModelSpecs.cs" />
     <Compile Include="FrontControllerSpecs.cs" />
     <Compile Include="RawHandlerSpecs.cs" />
