@@ -2,7 +2,7 @@ using System;
 
 namespace nothinbutdotnetstore.core
 {
-    public interface ICanStopwatch
+    public interface ICanMonitorTime
     {
         void Start();
         void Stop();

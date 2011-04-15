@@ -1,17 +1,16 @@
-using System;
 using nothinbutdotnetstore.core;
 
 namespace nothinbutdotnetstore.web.core
 {
     public class LogTimingCommand : IEncapsulateApplicationSpecificFunctionality
     {
-        readonly IEncapsulateApplicationSpecificFunctionality _innerCommand;
-        readonly ICanStopwatch _stopWatch;
-        readonly ILogMessages _logger;
+        IEncapsulateApplicationSpecificFunctionality _innerCommand;
+        ICanMonitorTime _stopWatch;
+        ILogMessages _logger;
 
         public LogTimingCommand(
             IEncapsulateApplicationSpecificFunctionality innerCommand,
-            ICanStopwatch stopWatch,
+            ICanMonitorTime stopWatch,
             ILogMessages logger)
         {
             _innerCommand = innerCommand;

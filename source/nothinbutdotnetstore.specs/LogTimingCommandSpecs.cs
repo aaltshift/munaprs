@@ -25,7 +25,7 @@ namespace nothinbutdotnetstore.specs
                 the_request = fake.an<IContainRequestDetails>();
                 inner_command = depends.on<IEncapsulateApplicationSpecificFunctionality>();
                 logger = depends.on<ILogMessages>();
-                stop_watch = depends.on<ICanStopwatch>();
+                stop_watch = depends.on<ICanMonitorTime>();
                 stop_watch.setup(x => x.Elapsed).Return(new TimeSpan(0, 0, 0, 0, 1));
             };
 
@@ -45,6 +45,6 @@ namespace nothinbutdotnetstore.specs
             static IEncapsulateApplicationSpecificFunctionality inner_command;
             static IContainRequestDetails the_request;
             static ILogMessages logger;
-            static ICanStopwatch stop_watch;
+            static ICanMonitorTime stop_watch;
         }
 }
