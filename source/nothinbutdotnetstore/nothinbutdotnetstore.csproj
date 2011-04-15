@@ -90,6 +90,7 @@
     <Compile Include="web\application\ViewTheDepartmentsInADepartment.cs" />
     <Compile Include="web\core\ICanDisplayReportModels.cs" />
     <Compile Include="web\application\ICanFindInformationInTheStoreCatalog.cs" />
+    <Compile Include="web\core\ICreateViewsBoundToReportModels.cs" />
     <Compile Include="web\core\ITriggerApplicationSpecificFunctionality .cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
     <Compile Include="web\core\ComposedCommand.cs" />
@@ -103,6 +104,7 @@
     <Compile Include="web\core\MissingCommandFactory.cs" />
     <Compile Include="web\core\RawHandler.cs" />
     <Compile Include="web\core\RequestCriteria.cs" />
+    <Compile Include="web\core\ResponseEngine.cs" />
     <Compile Include="web\core\stubs\GetTheMainDepartmentsInTheStore.cs" />
     <Compile Include="web\core\stubs\StubCommandFactory.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
